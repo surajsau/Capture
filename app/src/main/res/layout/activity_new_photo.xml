@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.halfplatepoha.capture.newphoto.NewPhotoActivity">
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="16dp"
+        android:layout_gravity="right"
+        android:src="@drawable/tick_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="?android:actionBarSize">
+
+        <ImageView
+            android:id="@+id/ivImagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tvLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Loading tags..."
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorAccent" />
+
+        <com.dpizarro.autolabel.library.AutoLabelUI
+            android:id="@+id/tags_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="?android:actionBarSize"
+            android:visibility="gone"
+            app:show_cross="true"
+            app:label_clickable="true"
+            app:label_padding="5dp"
+            app:label_background_res="@drawable/rounded_rectangle_dark"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccentDark"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etAddTag"
+            android:layout_width="0dp"
+            android:paddingLeft="16dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Add Extra Tags"
+            android:textColor="@color/white"
+            tools:text="Sample text"
+            android:textColorHint="@color/colorAccent" />
+
+        <ImageButton
+            android:id="@+id/btnAddTag"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:src="@drawable/add_tag" />
+
+    </LinearLayout>
+
+</FrameLayout>

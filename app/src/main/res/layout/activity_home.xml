@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageButton android:id="@+id/btnLocation"
+            android:layout_width="wrap_content"
+            android:src="@drawable/pin"
+            android:layout_gravity="end|center_vertical"
+            android:background="@null"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textSize="20sp" />
+
+        <!--<ImageButton android:id="@+id/btnCamera"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:src="@drawable/camera"-->
+            <!--android:layout_gravity="end|center_vertical"-->
+            <!--android:background="@null"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="16dp"/>-->
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:actionBarSize"/>
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        app:bb_behavior="shy"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:layout_behavior="com.halfplatepoha.capture.FabBehaviour"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/camera"
+        app:backgroundTint="@color/colorPrimaryDark"
+        android:layout_margin="16dp" />
+
+</android.support.design.widget.CoordinatorLayout>
